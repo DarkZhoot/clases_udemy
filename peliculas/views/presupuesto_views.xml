@@ -19,8 +19,11 @@
                         </div>
                         <div class="o_row">
                             <field name="clasificacion" required="1"/>
-                            <span class="fa fa-circle"/>
+                            <span class="fa fa-circle" invisible="clasificacion == False and fch_estreno == False" style="font-size: 8px; padding: 5px 5px"/>
                             <field name="fch_estreno"/>
+                        </div>
+                        <div class="o_row">
+                            <field name="genero_ids" widget="many2many_tags"/>
                         </div>
                     </div>
                 </sheet>
