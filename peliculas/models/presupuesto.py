@@ -4,6 +4,7 @@ from odoo import fields, models, api
 
 class Presupuesto(models.Model):
     _name = "presupuesto"
+    _inherit =  ['image.mixin']
     name = fields.Char(string='Pelicula')
     clasificacion = fields.Selection(
         selection=[
@@ -13,7 +14,8 @@ class Presupuesto(models.Model):
             ("R", "R"), #Mayores de 18
         ], string="Clasificacion")
     fch_estreno = fields.Date(string='Fecha estreno')
-    puntuacion = fields.Integer(string='Puntuacion')
+    puntuacion = fields.Integer(string='Puntuacion', related="puntuacion2")
+    puntuacion2 = fields.Integer(string='Puntuacion2')
     active = fields.Boolean(string='Activo', default=True)
     director_id = fields.Many2one(
         comodel_name='res.partner',
