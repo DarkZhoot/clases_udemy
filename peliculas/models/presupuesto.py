@@ -26,4 +26,3 @@ class Presupuesto(models.Model):
         string='Generos'
     )
     vista_general = fields.Text(string='Descripcion')
-# prueba
