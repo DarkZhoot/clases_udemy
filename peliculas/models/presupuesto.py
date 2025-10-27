@@ -26,3 +26,7 @@ class Presupuesto(models.Model):
         string='Generos'
     )
     vista_general = fields.Text(string='Descripcion')
+    link_trailer = fields.Char(string='Trailer')
+    es_libro = fields.Boolean(string='Version Libro')
+    libro = fields.Binary(string='Libro')
+    libro_filename = fields.Char(string='Nombre del libro')

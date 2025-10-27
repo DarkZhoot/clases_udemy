@@ -26,6 +26,19 @@
                             <field name="genero_ids" widget="many2many_tags"/>
                         </div>
                     </div>
+                    <group string="Datos Principales" style="margin-top: -10px;">
+                        <field name="vista_general" placeholder="Vista general..."/>
+                        <group>
+                            <field name="director_id"/>
+                            <field name="link_trailer"/>
+                        </group>
+                        <group>
+                            <field name="es_libro" widget="boolean_toggle"/>
+                            <field name="libro" filename="libro_filename" invisible="es_libro == False"/>
+                            <field name="libro_filename" invisible="1"/>
+                        </group>
+
+                    </group>
                 </sheet>
             </form>
         </field>
